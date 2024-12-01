@@ -1,0 +1,94 @@
+.PostTodo {
+  background: rgba(128, 128, 128, 0.203);
+  padding: 20px;
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .bigBlock {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+
+        // Лоадер на карточке
+        .loader-card {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(255, 255, 255, 0.8);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 1;
+        }
+
+        .edit {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          input {
+            width: 350px;
+            height: 40px;
+            cursor: pointer;
+          }
+        }
+
+        .block {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          gap: 10px;
+
+          .buttons {
+            display: flex;
+            gap: 10px;
+          }
+
+          .btn1,
+          .btn2 {
+            width: 100px;
+            height: 50px;
+          }
+        }
+
+        img {
+          width: 330px;
+          height: 300px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  // Стили для анимации лоадера
+  .loading {
+    width: 60px;
+    height: 60px;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
